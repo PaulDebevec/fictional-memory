@@ -7,6 +7,7 @@ class Api::V0::SessionsController < ApplicationController
       render json: {'auth_token' => user.auth_token, 'message' => message}, status: 200
     else
       message = "Invalid user credentials"
+      render json: {'data' => message}, status: 401
     end
   end
 end

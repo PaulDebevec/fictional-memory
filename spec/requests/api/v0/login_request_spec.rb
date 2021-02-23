@@ -16,4 +16,17 @@ RSpec.describe 'User Login Endpoint Request' do
     expect(json.keys.include?(:auth_token)).to eq(true)
     expect(json.keys.include?(:message)).to eq(true)
   end
+
+  it 'Incorrect login credentials return 401 error message' do
+    user_2 = User.create( email: 'sample.coach_2@mobile.edu',
+                        password: 'password')
+
+    post '/api/v0/login', params: { email: user_2.email,
+                                    password: 'incorrectPassword'}
+
+    expect(response).not_to be_successful
+    expect(response.status).to eq(401)
+    json = JSON.parse(response.body, symbolize_names: true)
+    expect(json[:data]).to eq("Invalid user credentials")
+  end
 end
