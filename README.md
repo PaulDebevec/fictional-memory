@@ -15,7 +15,7 @@ Fictional-memory is an API built to display my understanding of API design and m
 
 ## About
 
-Fictional Memory is a Rails API built to expose specified endpoints for a front-end application. I used this oppertunity to also display my workflow through the GitHub [project board](https://github.com/PaulDebevec/fictional-memory/projects/1) attached to this repository, as well as recording commands for setup through [this google sheet](https://docs.google.com/spreadsheets/d/1PkwBJFuLyXWhZCB7y00patmVpPMuqixcKCGQ_LPkKOw/edit?usp=sharing).
+Fictional Memory is a Rails API built to expose specified endpoints for a front-end application. I used this opportunity to also display my workflow through the GitHub [project board](https://github.com/PaulDebevec/fictional-memory/projects/1) attached to this repository, as well as recording commands for setup through [this google sheet](https://docs.google.com/spreadsheets/d/1PkwBJFuLyXWhZCB7y00patmVpPMuqixcKCGQ_LPkKOw/edit?usp=sharing).
 
 ### Tech Stack
 
