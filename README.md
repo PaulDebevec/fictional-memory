@@ -70,6 +70,11 @@ rspec
 
 ## API Endpoints
 
+To run your server locally
+```sh
+rails s
+```
+
 Retrieve auth_token by logging in with an authorized user:
 ```sh
 POST api/v0/login
