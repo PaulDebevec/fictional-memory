@@ -41,7 +41,8 @@ To get a local copy up and running follow the proceeding steps.
 git clone git@github.com:PaulDebevec/fictional-memory.git
 ```
 OR
-1b Clone the repo using HTTPS
+
+1b. Clone the repo using HTTPS
 ```sh
 git clone https://github.com/PaulDebevec/fictional-memory.git
 ```
