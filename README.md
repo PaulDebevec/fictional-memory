@@ -32,7 +32,7 @@ Fictional Memory is a Rails API built to expose specified endpoints for a front-
 
 ## Getting Started
 
-To get a local copy up and running follow the following steps.
+To get a local copy up and running follow the proceeding steps.
 
 ### Installation
 
