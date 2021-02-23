@@ -27,6 +27,8 @@ RSpec.describe 'User Login Endpoint Request' do
     expect(response).not_to be_successful
     expect(response.status).to eq(401)
     json = JSON.parse(response.body, symbolize_names: true)
-    expect(json[:data]).to eq("Invalid user credentials")
+    expect(json.keys.include?(:data)).to eq(true)
+    expect(json[:data].keys.include?(:message)).to eq(true)
+    expect(json[:data][:message]).to eq("Invalid user credentials")
   end
 end
