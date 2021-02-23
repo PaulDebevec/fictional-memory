@@ -10,4 +10,8 @@ RSpec.describe Player, type: :model do
     it {should validate_presence_of(:graduation_year)}
     it {should validate_presence_of(:position)}
   end
+
+  describe 'relationships' do
+    it {should belong_to(:team).optional}
+  end
 end

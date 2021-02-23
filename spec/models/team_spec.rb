@@ -6,4 +6,8 @@ RSpec.describe Team, type: :model do
     it {should validate_presence_of(:age_group)}
     it {should validate_presence_of(:coach)}
   end
+
+  describe 'relationships' do
+    it {should have_many(:players)}
+  end
 end
