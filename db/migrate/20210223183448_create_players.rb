@@ -8,7 +8,7 @@ class CreatePlayers < ActiveRecord::Migration[6.0]
       t.string :birthday
       t.integer :graduation_year
       t.string :position
-      t.boolean :recruit
+      t.boolean :recruit, default: false
 
       t.timestamps
     end
