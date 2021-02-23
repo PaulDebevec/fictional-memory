@@ -1,7 +1,10 @@
 class Api::V0::SessionsController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def create
-    user = User.find_by(email: params[:email])
-    if user.authenticate(params[:password])
+    request_body = JSON.parse(request.body.read)
+    user = User.find_by(email: request_body['email'])
+    if user.authenticate(request_body['password'])
       user.generate_api_token
       message = "user authenticated"
       render json: {'auth_token' => user.auth_token, 'message' => message}, status: 200

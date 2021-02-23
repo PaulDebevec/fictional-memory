@@ -5,8 +5,8 @@ RSpec.describe 'User Login Endpoint Request' do
     user = User.create( email: 'sample.coach@mobile.edu',
                         password: 'samplepassword')
 
-    post '/api/v0/login', params: { email: user.email,
-                                  password: user.password}
+    payload = { email: user.email, password: user.password}.to_json
+    post '/api/v0/login', params: payload
 
     expect(response).to be_successful
     expect(response.status).to eq(200)
@@ -21,8 +21,8 @@ RSpec.describe 'User Login Endpoint Request' do
     user_2 = User.create( email: 'sample.coach_2@mobile.edu',
                         password: 'password')
 
-    post '/api/v0/login', params: { email: user_2.email,
-                                    password: 'incorrectPassword'}
+    payload = { email: user_2.email, password: 'invalidpassword'}.to_json
+    post '/api/v0/login', params: payload
 
     expect(response).not_to be_successful
     expect(response.status).to eq(401)
