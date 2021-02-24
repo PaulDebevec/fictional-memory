@@ -3,7 +3,7 @@ class CreateTeams < ActiveRecord::Migration[6.0]
     create_table :teams do |t|
       t.string :name
       t.string :age_group
-      t.string :coach
+      t.string :coach, default: ''
 
       t.timestamps
     end
