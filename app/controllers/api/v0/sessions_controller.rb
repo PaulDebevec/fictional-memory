@@ -1,5 +1,4 @@
 class Api::V0::SessionsController < ApplicationController
-  skip_before_action :verify_authenticity_token
 
   def create
     # Parse the body and make it readable JSON
