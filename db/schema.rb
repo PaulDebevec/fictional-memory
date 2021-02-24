@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_23_195645) do
+ActiveRecord::Schema.define(version: 2021_02_23_234443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2021_02_23_195645) do
   create_table "teams", force: :cascade do |t|
     t.string "name"
     t.string "age_group"
-    t.string "coach"
+    t.string "coach", default: ""
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -42,7 +42,11 @@ ActiveRecord::Schema.define(version: 2021_02_23_195645) do
     t.string "email"
     t.string "password_digest"
     t.string "auth_token"
+    t.string "full_name"
+    t.bigint "team_id"
+    t.index ["team_id"], name: "index_users_on_team_id"
   end
 
   add_foreign_key "players", "teams"
+  add_foreign_key "users", "teams"
 end
