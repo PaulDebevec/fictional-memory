@@ -5,8 +5,8 @@ FactoryBot.define do
     height  { Faker::Number.between(from: 152, to: 200) }
     weight  { Faker::Number.between(from: 130, to: 220) }
     birthday  { Faker::Date.between(from: '1998-01-01', to: '2003-01-01') }
-    graduation_year  { 2021 }
+    graduation_year  { Faker::Number.between(from: 2019, to: 2023) }
     position  { Faker::Sports::Basketball.position }
-    recruit  { Faker::Boolean.boolean }
+    recruit  { true }
   end
 end
