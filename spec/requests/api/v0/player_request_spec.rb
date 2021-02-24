@@ -83,4 +83,35 @@ RSpec.describe 'User Login Endpoint Request' do
     expect(json[:data][0][:attributes].length).to eq(8)
     expect(json[:data].length).to eq(5)
   end
+
+  it 'API sends 401 response to users who do not have a valid auth_token' do
+    # Create a user with random name, random email, and password of 'password'
+    coach_and_team_1 = FactoryBot.create(:user , team_id: FactoryBot.create(:team).id)
+    coach_and_team_1.team.update(coach: coach_and_team_1.full_name)
+    # Update user email to 'samplecoach@example.com'
+    coach_and_team_1.update(auth_token: 'NHa/tjwQOJxDTUzG1XTSYvgr0ru9iqCcXsG3Ovwl8OjcVOE8B67zMHrhcn+z34Lf1HXIb1WeDOoFyGn8+58Q26ookmMaJTHVG9a19sfeEPoabKShCFSJToBM')
+    team_1 = coach_and_team_1.team
+    team_1_players = FactoryBot.create_list(:player, 5)
+    team_1.players << team_1_players
+
+    message = 'user authorized'
+    # Begin test for '/players' endpoint
+    payload_2 = { auth_token: 'non_existant_auth_token', message: message }
+
+    get '/api/v0/players', headers: payload_2
+
+    expect(response).not_to be_successful
+    expect(response.status).to eq(401)
+    json = JSON.parse(response.body, symbolize_names: true)
+    expect(json[:data][:message]).to eq('You do not have access to view this page')
+  end
+
+  it 'API sends 401 response to users who are not logged in' do
+    get '/api/v0/players'
+
+    expect(response).not_to be_successful
+    expect(response.status).to eq(401)
+    json = JSON.parse(response.body, symbolize_names: true)
+    expect(json[:data][:message]).to eq('You do not have access to view this page')
+  end
 end
