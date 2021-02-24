@@ -8,7 +8,6 @@ RSpec.describe 'User Login Endpoint Request' do
 
     payload = { email: user.email, password: user.password}.to_json
     post '/api/v0/login', params: payload
-
     expect(response).to be_successful
     expect(response.status).to eq(200)
     json = JSON.parse(response.body, symbolize_names: true)
