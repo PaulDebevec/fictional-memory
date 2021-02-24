@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v0 do
       post '/login', to: 'sessions#create'
+      resources :players, only: [:index]
     end
   end
 end

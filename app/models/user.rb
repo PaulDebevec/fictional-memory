@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   belongs_to :team, optional: true
 
-  def generate_api_token
+  def generate_auth_token
     token = AuthTokenGenerator.generate_token
     self.update(auth_token: token)
   end
