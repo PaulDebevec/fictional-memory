@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   belongs_to :team, optional: true
   has_many :assessments
+  has_many :notes
 
   def generate_auth_token
     token = AuthTokenGenerator.generate_token
