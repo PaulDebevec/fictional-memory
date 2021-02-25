@@ -4,8 +4,9 @@ Unit Notes: Height is in cm, weight is in pounds.
 ## API Endpoints
 
 * [Login](#login)
-* [List of Players](#players)
-  * [Individual Player](#player)
+* [Player Endpoints](#player-endpoints)
+  * [List of Players](#players)
+
 
 
 Run your server locally to test calls in Postman (Default url should be http://localhost:3000/)
@@ -35,6 +36,8 @@ Expected response:
     "message": "user authenticated"
 }
 ```
+
+##Player Endpoints
 
 ## Players
 `/players` endpoint - Returns all players associated to the logged in user(coach)
