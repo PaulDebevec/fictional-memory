@@ -37,7 +37,7 @@ Expected response:
 }
 ```
 
-##Player Endpoints
+## Player Endpoints
 
 ## Players
 `/players` endpoint - Returns all players associated to the logged in user(coach)
