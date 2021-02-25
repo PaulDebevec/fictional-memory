@@ -12,7 +12,7 @@ Run your server locally to test calls in Postman (Default url should be http://l
 rails s
 ```
 
-###/login
+### /login
 `/login` endpoint - Retrieve auth_token by logging in with an authorized user:
 ```sh
 POST api/v0/login
@@ -35,7 +35,7 @@ Expected response:
 }
 ```
 
-###/players
+### /players
 `/players` endpoint - Returns all players associated to the logged in user(coach)
 ```sh
 GET api/v0/players
