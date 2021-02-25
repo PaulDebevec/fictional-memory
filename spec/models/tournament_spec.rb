@@ -11,5 +11,6 @@ RSpec.describe Tournament, type: :model do
   describe 'relationships' do
     it {should have_many(:tournament_teams)}
     it {should have_many(:teams).through(:tournament_teams)}
+    it {should have_many(:assessments)}
   end
 end

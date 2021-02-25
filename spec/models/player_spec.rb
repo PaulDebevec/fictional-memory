@@ -13,5 +13,6 @@ RSpec.describe Player, type: :model do
 
   describe 'relationships' do
     it {should belong_to(:team).optional}
+    it {should have_many(:assessments)}
   end
 end
