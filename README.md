@@ -25,7 +25,7 @@ Ruby: 2.6.6| RSpec
 PostgreSQL: 12.2 | Capybara
 Rails: 6.0.3 | Simplecov
 Bcrypt (password encryption) | Shoulda-matchers
- | Pry (For debugging)
+ ...| Pry (For debugging)
 
 ### Schema
 
