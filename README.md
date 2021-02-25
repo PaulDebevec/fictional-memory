@@ -12,6 +12,7 @@ Fictional-memory is an API built to display my understanding of API design, and 
   * [Installation](#installation)
   * [Testing](#testing)
 * [API Access Points](#api-endpoints)
+* [Technical Questions](#technical-questions)
 
 ## About
 
@@ -67,4 +68,8 @@ bundle exec rspec
 ## API Endpoints
 
 View the [endpoints and their expected responses](https://github.com/PaulDebevec/fictional-memory/blob/main/api_calls_responses.md)
+
+## Technical Questions
+
+View my [answers to the technical questions](https://github.com/PaulDebevec/fictional-memory/blob/main/answers_to_technical_questions.md)
 
