@@ -1,5 +1,10 @@
 Unit Notes: Height is in cm, weight is in pounds.
 
+Run your server locally to test calls in Postman (Default url should be http://localhost:3000/)
+```ruby
+rails s
+```
+
 
 ## API Endpoints
 
@@ -7,12 +12,7 @@ Unit Notes: Height is in cm, weight is in pounds.
 * [Player Endpoints](#player-endpoints)
   * [List of Players](#players)
 
-
-
-Run your server locally to test calls in Postman (Default url should be http://localhost:3000/)
-```ruby
-rails s
-```
+##
 
 ## Login
 `/login` endpoint - Retrieve auth_token by logging in with an authorized user:
