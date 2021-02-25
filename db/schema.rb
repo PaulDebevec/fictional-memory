@@ -15,6 +15,11 @@ ActiveRecord::Schema.define(version: 2021_02_25_003055) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "assessments", force: :cascade do |t|
+    t.float "rating"
+    t.string "assessment_type", default: "event"
+  end
+
   create_table "players", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
