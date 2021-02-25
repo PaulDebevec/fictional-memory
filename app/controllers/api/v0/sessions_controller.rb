@@ -1,5 +1,4 @@
 class Api::V0::SessionsController < ApplicationController
-
   def create
     # Parse the body and make it readable JSON
     request_body = JSON.parse(request.body.read)
