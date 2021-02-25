@@ -64,8 +64,8 @@ rails db:{create,migrate,seed}
 
 Run the test suite from the root directory of the repository
 
-```sh
-rspec
+```ruby
+bundle exec rspec
 ```
 
 ## API Endpoints
