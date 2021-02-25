@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_25_014152) do
+ActiveRecord::Schema.define(version: 2021_02_25_031020) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,16 @@ ActiveRecord::Schema.define(version: 2021_02_25_014152) do
     t.index ["player_id"], name: "index_assessments_on_player_id"
     t.index ["tournament_id"], name: "index_assessments_on_tournament_id"
     t.index ["user_id"], name: "index_assessments_on_user_id"
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.string "note"
+    t.bigint "user_id", null: false
+    t.bigint "assessments_id", null: false
+    t.bigint "assessment_id", null: false
+    t.index ["assessment_id"], name: "index_notes_on_assessment_id"
+    t.index ["assessments_id"], name: "index_notes_on_assessments_id"
+    t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
   create_table "players", force: :cascade do |t|
@@ -77,6 +87,9 @@ ActiveRecord::Schema.define(version: 2021_02_25_014152) do
   add_foreign_key "assessments", "players"
   add_foreign_key "assessments", "tournaments"
   add_foreign_key "assessments", "users"
+  add_foreign_key "notes", "assessments"
+  add_foreign_key "notes", "assessments", column: "assessments_id"
+  add_foreign_key "notes", "users"
   add_foreign_key "players", "teams"
   add_foreign_key "users", "teams"
 end

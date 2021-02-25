@@ -10,5 +10,6 @@ RSpec.describe User, type: :model do
   describe 'relationships' do
     it {should belong_to(:team).optional}
     it {should have_many(:assessments)}
+    it {should have_many(:notes)}
   end
 end
