@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_25_003055) do
+ActiveRecord::Schema.define(version: 2021_02_25_014152) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "assessments", force: :cascade do |t|
+    t.float "rating"
+    t.string "assessment_type", default: "event"
+    t.bigint "player_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "tournament_id", null: false
+    t.index ["player_id"], name: "index_assessments_on_player_id"
+    t.index ["tournament_id"], name: "index_assessments_on_tournament_id"
+    t.index ["user_id"], name: "index_assessments_on_user_id"
+  end
 
   create_table "players", force: :cascade do |t|
     t.string "first_name"
@@ -63,6 +74,9 @@ ActiveRecord::Schema.define(version: 2021_02_25_003055) do
     t.index ["team_id"], name: "index_users_on_team_id"
   end
 
+  add_foreign_key "assessments", "players"
+  add_foreign_key "assessments", "tournaments"
+  add_foreign_key "assessments", "users"
   add_foreign_key "players", "teams"
   add_foreign_key "users", "teams"
 end
