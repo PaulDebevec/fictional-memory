@@ -15,7 +15,8 @@ rails s
 
 
 ## Login
-`/login` endpoint - Retrieve auth_token by logging in with an authorized user:
+## /login
+Retrieve auth_token by logging in with an authorized user:
 ```sh
 POST api/v0/login
 ```
@@ -39,7 +40,7 @@ Expected response:
 
 ## Player Endpoints
 
-## /Players
+## /players
 Returns all players associated to the logged in user(coach).
 ```sh
 GET api/v0/players
