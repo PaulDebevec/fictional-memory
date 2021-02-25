@@ -52,11 +52,11 @@ OR
 git clone https://github.com/PaulDebevec/fictional-memory.git
 ```
 2. Install the Gem File
-```sh
+```ruby
 bundle install
 ```
 3. Create your environment
-```sh
+```ruby
 rails db:{create,migrate,seed}
 ```
 
