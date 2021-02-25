@@ -3,8 +3,8 @@ Unit Notes: Height is in cm, weight is in pounds.
 
 ## API Endpoints
 
-* [Login](#/login)
-* [Players](#/player)
+* [Login](#login)
+* [Players](#player)
 
 
 Run your server locally to test calls in Postman (Default url should be http://localhost:3000/)
@@ -12,7 +12,7 @@ Run your server locally to test calls in Postman (Default url should be http://l
 rails s
 ```
 
-### /login
+## Login
 `/login` endpoint - Retrieve auth_token by logging in with an authorized user:
 ```sh
 POST api/v0/login
@@ -35,7 +35,7 @@ Expected response:
 }
 ```
 
-### /players
+## Players
 `/players` endpoint - Returns all players associated to the logged in user(coach)
 ```sh
 GET api/v0/players
