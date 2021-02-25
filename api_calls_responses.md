@@ -4,7 +4,8 @@ Unit Notes: Height is in cm, weight is in pounds.
 ## API Endpoints
 
 * [Login](#login)
-* [Players](#player)
+* [List of Players](#players)
+  * [Individual Player](#player)
 
 
 Run your server locally to test calls in Postman (Default url should be http://localhost:3000/)
