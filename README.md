@@ -19,17 +19,13 @@ Fictional Memory is a Rails API built to expose specified endpoints for a front-
 
 ### Tech Stack
 
-- Ruby: 2.6.6
-- PostgreSQL: 12.2
-- Rails: 6.0.3
-- Bcrypt (password encryption)
-
-***Testing framework***
-- RSpec
-- Capybara
-- Simplecov
-- Shoulda-matchers
-- Pry (For debugging)
+***Stack*** | ***Testing framework***
+------------ | -------------
+Ruby: 2.6.6| RSpec
+PostgreSQL: 12.2 | Capybara
+Rails: 6.0.3 | Simplecov
+Bcrypt (password encryption) | Shoulda-matchers
+ | Pry (For debugging)
 
 ### Schema
 
