@@ -10,7 +10,7 @@ rails s
 
 * [Login](#login)
 * [Player Endpoints](#player-endpoints)
-  * [List of Players](#players)
+  * [List of Players](#/players)
 
 ##
 
@@ -39,7 +39,7 @@ Expected response:
 
 ## Player Endpoints
 
-## Players
+## /Players
 `/players` endpoint - Returns all players associated to the logged in user(coach)
 ```sh
 GET api/v0/players
