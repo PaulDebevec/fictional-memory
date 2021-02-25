@@ -8,6 +8,6 @@ describe TournamentTeam, type: :model do
 
   describe "relationships" do
     it {should belong_to :team}
-    it {should belong_to :tournaments}
+    it {should belong_to :tournament}
   end
 end
