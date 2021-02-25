@@ -33,7 +33,7 @@ Fictional Memory is a Rails API built to expose specified endpoints for a front-
 
 ### Schema
 
-Image Coming Soon
+<iframe width="560" height="315" src='https://dbdiagram.io/embed/6033fa02fcdcb6230b20fafe'> </iframe>
 
 ## Getting Started
 
