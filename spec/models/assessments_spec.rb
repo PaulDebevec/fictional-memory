@@ -13,5 +13,6 @@ RSpec.describe Assessment, type: :model do
     it {should belong_to(:user)}
     it {should belong_to(:tournament)}
     it {should belong_to(:player)}
+    it {should have_many(:notes)}
   end
 end
