@@ -45,13 +45,7 @@ Returns all players associated to the logged in user(coach).
 GET api/v0/players
 ```
 
-Note: If there is an active session the GET request will return the players. If there is not an active session, a valid `auth_token` must be sent through the headers to receive a successful response.
-
-Example of auth_token being sent through the headers:
-```json
-{'auth_token': 'NHa/tjwQOJxDTUzG1XTSYvgr0ru9iqCcXsG3Ovwl8OjcVOE8B67zMHrhcn+z34Lf1HXIb1WeDOoFyGn8+58Q26ookmMaJTHVG9a19sfeEPoabKShCFSJToBM'}
-```
-To obtain an auth_token send the login POST request above.
+Note: If there is an active session the GET request will return the players. If there is not an active session, a valid `auth_token` must be sent through the headers to receive a successful response. To obtain an auth_token send the login POST request above.
 
 Expected response:
 ```json
